@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=EB+Garamond&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#0c0c0c, #1a1a1a);
+  color: #e0e0e0;
+  font-family: 'EB Garamond', serif;
+  padding: 2rem;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3rem;
+  color: #f0dca0;
+  text-shadow: 0 0 10px rgba(255, 215, 100, 0.5);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.game {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 240, 200, 0.05);
+}
+
+.game:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 240, 200, 0.2);
+}
+
+.game h2 {
+  font-family: 'UnifrakturCook', cursive;
+  color: #f0dca0;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.game img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  transition: opacity 0.4s ease;
+}
+
+.game img:hover {
+  opacity: 0.85;
+}
+
+.game p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  opacity: 0.05;
+  z-index: -1;
+}
